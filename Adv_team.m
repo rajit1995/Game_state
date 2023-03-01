@@ -1,4 +1,3 @@
-
 function advteam = Adv_team(gameState)
 advteam = -1;
 for playernum = 1:1:8
@@ -10,4 +9,3 @@ for playernum = 1:1:8
         end 
     end                          
 end
-

@@ -1,12 +1,13 @@
-function gameState = initFoulState(gameState,flag);
+function gameState = initFoulState(gameState,flag)
     advteam= Adv_team(gameState);
-    if gameState.state == "ThrowIn"
+    if flag == GameFlag.outOfPlay
         gameState = ThrowIn(gameState,advteam) ;
-    elseif gameState.state == "GoalKick"
+    elseif flag == GameFlag.goalKick
         gameState = GoalKick(gameState,advteam) ;
-    elseif gameState.state == "KickOff"
+    elseif flag == GameFlag.goalScore
         gameState = KickOff(gameState,advteam);
-    elseif gameState.state == "CornerKick"
+    elseif flag == GameFlag.corner
         gameState = CornerKick(gameState,advteam);
     end
 end
+

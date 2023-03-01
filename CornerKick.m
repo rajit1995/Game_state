@@ -56,7 +56,13 @@ function gameState = CornerKick(gameState,advteam)
                 gameState.players(idx).dir = -0.5*pi;
             end 
         end
- 
+
+
+
+
+
+
+
     elseif (gameState.ball.position(2) > 0 && gameState.ball.position(2) <=1.7) && gameState.ball.position(1) >= 9 && advteam == 0
         gameState.ball.position = [9 0];
         thruplayeridx = randsample([2 4 3], 1);

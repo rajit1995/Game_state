@@ -12,7 +12,7 @@ function gameState = GoalKick(gameState,advteam)
       allPositions((allPositions(:,2) > 5.1 ),:) = [];
       allPositions((allPositions(:,2) < 0.1 ),:) = [] ;
       shuffledPositions = allPositions(randperm(size(allPositions,1)), :);
-      shuffledPositions = shuffledPositions(randperm(size(shuffledPositions,1)), :) 
+      shuffledPositions = shuffledPositions(randperm(size(shuffledPositions,1)), :); 
       for i = 1:length(gameState.players)
           if i ~= 1 && i ~= 8
               gameState.players(i).pos = shuffledPositions(i,:);
@@ -52,4 +52,3 @@ function gameState = GoalKick(gameState,advteam)
           gameState.players(idx).dir = 0;
       end
   end
-            
